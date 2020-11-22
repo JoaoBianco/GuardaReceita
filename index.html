@@ -26,6 +26,8 @@
 
     <link rel="stylesheet" href="css/estilo.css" />
 
+    <script src="js/app.js"></script>
+
     <!-- HTML5Shiv -->
     <!--[if lt IE 9]>
       <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
@@ -35,7 +37,7 @@
   </head>
   <body>
     <section id="app">
-      <!-- Modal -->
+      <!-- Modal Apresentar -->
       <div
         class="modal fade"
         id="exampleModal"
@@ -46,7 +48,7 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Titulo</h5>
               <button
                 type="button"
                 class="close"
@@ -63,15 +65,99 @@
                 class="btn btn-secondary"
                 data-dismiss="modal"
               >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                Save changes
+                Fechar
               </button>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Modal criacao -->
+      <div
+        class="modal fade"
+        id="modal-criar"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Nova receita</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="nome-receita">Nome da receita</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nome-receita"
+                    aria-describedby="nome da receita"
+                    maxlength="25"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="descricao-receita">Descricao</label>
+                  <textarea
+                    required
+                    class="form-control"
+                    id="descricao-receita"
+                    rows="3"
+                    maxlength="56"
+                  ></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="modo-preparo-receita">Modo de preparo</label>
+                  <textarea
+                    class="form-control"
+                    id="modo-preparo-receita"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="ingredientes-receita">Ingredientes</label>
+                  <textarea
+                    class="form-control"
+                    id="ingredientes-receita"
+                    rows="4"
+                  ></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="submit"
+                class="btn btn-ver"
+                id="confirmar-receita"
+                onclick="app1()"
+                data-dismiss="modal"
+              >
+                Adicionar
+              </button>
+              <button
+                type="button"
+                class="btn btn-secundarios"
+                data-dismiss="modal"
+                onclick="limpar()"
+              >
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fim Modal criacao -->
 
       <div class="container">
         <div class="row">
@@ -79,9 +165,9 @@
             <p class="display-2 text-center text-black">Guarda Receita</p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="card mt-3">
+        <div class="row" id="aplicacao">
+          <div class="col-md-4">
+            <div class="card mb-3">
               <img
                 src="https://via.placeholder.com/320"
                 class="card-img-top"
@@ -103,8 +189,8 @@
             </div>
           </div>
 
-          <div class="col-sm-4">
-            <div class="card mt-3">
+          <div class="col-md-4">
+            <div class="card mb-3">
               <img
                 src="https://via.placeholder.com/320"
                 class="card-img-top"
@@ -125,8 +211,8 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-4">
-            <div class="card mt-3">
+          <div class="col-md-4">
+            <div class="card mb-3">
               <img
                 src="https://via.placeholder.com/320"
                 class="card-img-top"
@@ -150,8 +236,10 @@
         </div>
       </div>
       <div id="botao-add">
-        <button class="btn">
-          <i class="fas fa-plus botao-adicionar"></i>
+        <button class="btn" id="botao-criar">
+          <a href="#" data-toggle="modal" data-target="#modal-criar"
+            ><i class="fas fa-plus botao-adicionar"></i
+          ></a>
         </button>
       </div>
     </section>

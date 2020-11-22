@@ -26,7 +26,6 @@ body {
 
 #botao-add .btn {
   background-color: black;
-  color: white;
   border: 1px solid black;
   border-radius: 50%;
 }
@@ -39,6 +38,7 @@ body {
 
 .botao-adicionar {
   font-size: 3em;
+  color: white;
 }
 
 .card {
