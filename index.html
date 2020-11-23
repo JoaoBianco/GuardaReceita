@@ -26,6 +26,8 @@
 
     <link rel="stylesheet" href="css/estilo.css" />
 
+    <script src="js/Bd.js"></script>
+    <script src="js/Receita.js"></script>
     <script src="js/app.js"></script>
 
     <!-- HTML5Shiv -->
@@ -35,7 +37,7 @@
 
     <title>Guarda Receita</title>
   </head>
-  <body>
+  <body onload="listar()">
     <section id="app">
       <!-- Modal Apresentar -->
       <div
@@ -139,7 +141,7 @@
                 type="submit"
                 class="btn btn-ver"
                 id="confirmar-receita"
-                onclick="app1()"
+                onclick="criarNovaReceita()"
                 data-dismiss="modal"
               >
                 Adicionar
@@ -165,75 +167,7 @@
             <p class="display-2 text-center text-black">Guarda Receita</p>
           </div>
         </div>
-        <div class="row" id="aplicacao">
-          <div class="col-md-4">
-            <div class="card mb-3">
-              <img
-                src="https://via.placeholder.com/320"
-                class="card-img-top"
-                alt="IMG"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Comida</h5>
-                <p class="card-text">Breve descricao.</p>
-                <a
-                  href="#"
-                  class="btn-ver btn"
-                  data-toggle="modal"
-                  data-target="#exampleModal"
-                  >Ver</a
-                >
-                <a href="#" class="btn btn-secundarios">Editar</a>
-                <a href="#" class="btn btn-secundarios">Deletar</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card mb-3">
-              <img
-                src="https://via.placeholder.com/320"
-                class="card-img-top"
-                alt="IMG"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Comida</h5>
-                <p class="card-text">Breve descricao.</p>
-                <a
-                  href="#"
-                  class="btn-ver btn"
-                  data-toggle="modal"
-                  data-target="#exampleModal"
-                  >Ver</a
-                >
-                <a href="#" class="btn btn-secundarios">Editar</a>
-                <a href="#" class="btn btn-secundarios">Deletar</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-3">
-              <img
-                src="https://via.placeholder.com/320"
-                class="card-img-top"
-                alt="IMG"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Comida</h5>
-                <p class="card-text">Breve descricao.</p>
-                <a
-                  href="#"
-                  class="btn-ver btn"
-                  data-toggle="modal"
-                  data-target="#exampleModal"
-                  >Ver</a
-                >
-                <a href="#" class="btn btn-secundarios">Editar</a>
-                <a href="#" class="btn btn-secundarios">Deletar</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="row" id="aplicacao"></div>
       </div>
       <div id="botao-add">
         <button class="btn" id="botao-criar">
