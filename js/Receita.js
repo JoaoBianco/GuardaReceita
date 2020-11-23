@@ -1,5 +1,6 @@
 class Receita {
-  constructor(nome, descricao, ingredientes, modo_preparo) {
+  constructor(id, nome, descricao, ingredientes, modo_preparo) {
+    this.id = id;
     this.nome = nome;
     this.descricao = descricao;
     this.ingredientes = ingredientes;

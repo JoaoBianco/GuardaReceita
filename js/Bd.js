@@ -38,6 +38,9 @@ class Bd {
     }
     return receitas;
   }
+  remover(id) {
+    localStorage.removeItem(id);
+  }
 }
 
 var bd = new Bd();
