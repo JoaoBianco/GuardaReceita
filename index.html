@@ -172,6 +172,92 @@
 
       <!-- Fim Modal criacao -->
 
+      <!-- Modal Edicao -->
+      <div
+        class="modal fade"
+        id="modal-editar"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Editar receita</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="nome-editar-receita">Nome da receita</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nome-editar-receita"
+                    aria-describedby="nome da receita"
+                    maxlength="25"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="descricao-editar-receita">Descricao</label>
+                  <textarea
+                    required
+                    class="form-control"
+                    id="descricao-editar-receita"
+                    rows="3"
+                    maxlength="56"
+                  ></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="modo-preparo-editar-receita"
+                    >Modo de preparo</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="modo-preparo-editar-receita"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="ingredientes-editar-receita">Ingredientes</label>
+                  <textarea
+                    class="form-control"
+                    id="ingredientes-editar-receita"
+                    rows="4"
+                  ></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="submit"
+                class="btn btn-ver"
+                id="confirmar-editar-receita"
+                onclick="editarReceita()"
+                data-dismiss="modal"
+              >
+                Confirmar
+              </button>
+              <button
+                type="button"
+                class="btn btn-secundarios"
+                data-dismiss="modal"
+              >
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="container">
         <div class="row">
           <div class="col-12">
